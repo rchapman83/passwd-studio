@@ -1,2 +1,4 @@
 # passwd-studio
-Project Passwd Studio, a password generator build on Python + Flask
+A password generator made for sh*ts and gigs. For the most part just playing around with Python, Flask APIs and Redhat OpenShift.
+<br>
+Find it at <a href="http://www.passwd.studio">passwd.studio</a>

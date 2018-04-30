@@ -14,9 +14,10 @@ charset2 = [
 ]
 
 lead1 = [
-    'Welcome to passwd.studio, your strong password is:',
-    'Passwd.studio has generated some loot for you:',
-    'Password123, I dont think so. Maybe try out:',
+    'Your strong password is:',
+    'We have generated some loot for you:',
+    'Password123, I dont think so:',
+    'Password generated:',
     ]
 
 def mkKey(lenKey=64):

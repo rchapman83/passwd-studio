@@ -26,12 +26,21 @@
     </div>
     </div>
     <br>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-8">
-            <p class="lead"> {{ leadText }} <br> <mark>{{ passwd }}</mark></p>
+    <div class="media">
+        <div class="media-left">
+            <img class="media-object" src="{{ url_for('static', filename='img/password.png') }}" alt="Password gen image" height="100" width="100">
+        </div>
+    <div class="media-body">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ leadText }}</h3>
+            </div>
+            <div class="panel-body">
+                <p class="lead"><mark>{{ passwd }}</mark></p>
+            </div>
         </div>
     </div>
+    </div>  
 {% endblock %}
 {% block footer %}
   <!-- Bottom page content -->

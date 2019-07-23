@@ -3,7 +3,7 @@
 
 import multiprocessing, os
 
-proj_name = os.environ.get('PROJECT_NAME)
+proj_name = os.environ.get('PROJECT_NAME')
 
 bind = '0.0.0.0:8080'
 name = proj_name

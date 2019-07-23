@@ -10,7 +10,7 @@ api = Api(application)
 
 class HelloWorld(Resource):
     def get(self):
-        return {'greeting': 'Hellow World'}, 200
+        return {'greeting': 'Hello World'}, 200
 
 class GetKey(Resource):
     def get(self):
@@ -19,7 +19,7 @@ class GetKey(Resource):
 
 class GetPasswd(Resource):
     def get(self):
-        passwd = generator.mkPassword();
+        passwd = generator.mkPassword()
         return {'password': passwd}, 200
 
 api.add_resource(GetPasswd, '/')

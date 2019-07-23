@@ -8,7 +8,7 @@ import os
 proj_name = os.environ.get('PROJECT_NAME')
 secret_code = os.environ.get('FLASK_SECRET')
 
-DEBUG = False
+DEBUG = True
 TESTING = False
 USE_X_SENDFILE = False
 CSRF_ENABLED = True

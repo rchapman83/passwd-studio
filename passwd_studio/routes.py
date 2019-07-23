@@ -10,7 +10,7 @@ api = Api(application)
 
 class HelloWorld(Resource):
     def get(self):
-        return {'greeting': 'Hellow World'}, 200
+        return {'greeting': 'Hello World'}, 200
 
 class GetKey(Resource):
     def get(self):

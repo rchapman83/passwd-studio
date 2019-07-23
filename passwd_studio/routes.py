@@ -21,7 +21,7 @@ class GetPasswd(Resource):
     def get(self, PassLen):
         if PassLen is None:
             PassLen = int(20)
-        if PassLen.is_integer() && PassLen > 0:
+        if PassLen.is_integer() and PassLen > 0:
             passwd = generator.mkPassword(PassLen)
         elif PassLen=='0':
             abort(404, message='Invalid input: INT must be larger than 0.')

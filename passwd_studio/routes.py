@@ -10,12 +10,18 @@ api = Api(application)
 
 class HelloWorld(Resource):
     def get(self):
-        return {'hello': 'world'}, 200
+        return {'greeting': 'Hellow World'}, 200
 
 class GetKey(Resource):
     def get(self):
-        token = mkKey();
+        token = generator.mkKey()
         return {'key': token}, 200
 
-api.add_resource(HelloWorld, '/', '/hi')
+class GetPasswd(Resource):
+    def get(self):
+        passwd = generator.mkPassword();
+        return {'password': passwd}, 200
+
+api.add_resource(GetPasswd, '/')
+api.add_resource(HelloWorld, '/hi')
 api.add_resource(GetKey, '/key')

@@ -17,7 +17,7 @@ t = os.environ.get('TIMBER_TOKEN')
 #log_format = '%(asctime)s - %(message)s'
 #logging.basicConfig(level=logging.INFO, format=log_format)
 #logger = logging.getLogger()
-#timber_handler = timber.TimberHandler(api_key=t, level=logging.INFO, buffer_capacity=20, flush_interval=60, raise_exceptions=True)
+#timber_handler = timber.TimberHandler(source_id='YOUR_SOURCE_ID', api_key=t, level=logging.INFO, buffer_capacity=20, flush_interval=60, raise_exceptions=True)
 #logger.addHandler(timber_handler)
 
 # Run either Gunicorn or Flask to serve the app

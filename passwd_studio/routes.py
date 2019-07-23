@@ -12,4 +12,11 @@ class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
 
+class GetKey(Resource):
+    def get(self):
+        token = mkKey();
+        return {'key': token}, 200
+
 api.add_resource(HelloWorld, '/')
+api.add_resource(HelloWorld, '/hi')
+api.add_resource(GetToken, '/token')

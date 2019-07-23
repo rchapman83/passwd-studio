@@ -11,15 +11,15 @@ x = os.environ.get('APP_MODE')
 c = os.environ.get('APP_CONFIG')
 # Get which app to run
 a = os.environ.get('APP_MODULE')
-# Timber api token
+# Timber api token and source id
 t = os.environ.get('TIMBER_TOKEN')
+s = os.environ.get('TIMBER_ID')
 
-
-#log_format = '%(asctime)s - %(message)s'
-#logging.basicConfig(level=logging.INFO, format=log_format)
-#logger = logging.getLogger()
-#timber_handler = timber.TimberHandler(api_key=t, level=logging.INFO, buffer_capacity=20, flush_interval=60, raise_exceptions=True)
-#logger.addHandler(timber_handler)
+log_format = '%(asctime)s - %(message)s'
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format=log_format)
+timber_handler = timber.TimberHandler(source_id=s, api_key=t, level=logging.INFO, buffer_capacity=20, flush_interval=60, raise_exceptions=True)
+logger.addHandler(timber_handler)
 
 # Run either Gunicorn or Flask to serve the app
 if x=='0':

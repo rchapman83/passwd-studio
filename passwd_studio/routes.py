@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-# All the views here
-
-# Import app via circular imports
-from . import application
 # Import password generator
 from . import generator
 # Import flask stuff

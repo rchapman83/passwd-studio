@@ -24,7 +24,7 @@ if x=='0':
         print('Failed to start-up application server, exiting')
         #logger.error('Failed to start-up gunicorn, exiting. Consider putting application into debug mode' + e)
         quit()
-elif x=="1':
+elif x=='1':
     print('Starting application in debug mode')
     #logger.debug('Starting flask app server in debug mode')
     from flask import Flask

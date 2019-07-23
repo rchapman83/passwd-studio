@@ -14,7 +14,7 @@ a = os.environ.get('APP_MODULE')
 # Timber api token
 t = os.environ.get('TIMBER_TOKEN')
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger()
 log_format = '%(asctime)s - %(message)s'
 logging.basicConfig(level=logging.INFO, format=log_format, handlers=[logging.StreamHandler(sys.stdout)])
 timber_handler = timber.TimberHandler(api_key=t, level=logging.INFO, buffer_capacity=20, flush_interval=60, raise_exceptions=True)

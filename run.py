@@ -15,8 +15,8 @@ a = os.environ.get('APP_MODULE')
 t = os.environ.get('TIMBER_TOKEN')
 
 # Run either Gunicorn or Flask to serve the app
-if x=="0":
-    print('Running web application')
+if x=='0':
+    print('Starting application server')
     try:
         subprocess.call(['gunicorn', '-c', c, a])
         #logger.info('gunicorn start-up complete')
@@ -24,8 +24,8 @@ if x=="0":
         print('Failed to start-up application server, exiting')
         #logger.error('Failed to start-up gunicorn, exiting. Consider putting application into debug mode' + e)
         quit()
-elif x=="1":
-    print('Starting web application in debug mode')
+elif x=="1':
+    print('Starting application in debug mode')
     #logger.debug('Starting flask app server in debug mode')
     from flask import Flask
     from passwd_studio import application

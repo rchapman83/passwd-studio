@@ -19,7 +19,7 @@ class GetKey(Resource):
 
 class GetPasswd(Resource):
     def get(self):
-        passwd = generator.mkPassword();
+        passwd = generator.mkPassword()
         return {'password': passwd}, 200
 
 api.add_resource(GetPasswd, '/')

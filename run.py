@@ -2,7 +2,7 @@
 # Entry point to bring up the web app
 
 # from os import environ
-import os, sys, subprocess, logging, logging.config, timber
+import os, subprocess, logging, logging.config, timber
 
 
 # Boolean 0=gunicorn  1=debug mode

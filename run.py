@@ -15,7 +15,7 @@ a = os.environ.get('APP_MODULE')
 t = os.environ.get('TIMBER_TOKEN')
 s = os.environ.get('TIMBER_ID')
 
-log_format = '%(asctime)s - %(message)s'
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format=log_format)
 timber_handler = timber.TimberHandler(source_id=s, api_key=t, level=logging.INFO, buffer_capacity=20, flush_interval=60, raise_exceptions=True)
@@ -26,7 +26,7 @@ if x=='0':
     print('Starting application server')
     try:
         subprocess.call(['gunicorn', '-c', c, a])
-        logger.debug('gunicorn start-up complete')
+        logger.info('gunicorn start-up complete')
     except RuntimeError as e:
         print('Failed to start-up application server, exiting')
         logger.error('Failed to start-up gunicorn, exiting. Consider putting application into debug mode' + e)

@@ -2,6 +2,8 @@
 # Import password application and generator functions
 from . import application
 from . import generator
+# Import logging mod
+import logging
 # Import flask stuff
 from flask import Flask
 from flask_restful import Resource, Api
@@ -10,7 +12,7 @@ api = Api(application)
 
 class HelloWorld(Resource):
     def get(self):
-        logger_timber.info('Test message...hi')
+        api.logger.info('Test message...hi')
         return {'greeting': 'Hello World'}, 200
 
 class GetKey(Resource):

@@ -25,7 +25,7 @@ LOGGING = {
         },
     },
     'loggers': {
-        'my-app': {
+        'logger_timber': {
             'handlers': ['timber'],
             'level': 'INFO',
         }

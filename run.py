@@ -26,7 +26,7 @@ if x=='0':
     print('Starting application server')
     try:
         subprocess.call(['gunicorn', '-c', c, a])
-        #logger.debug('gunicorn start-up complete')
+        logger.debug('gunicorn start-up complete')
     except RuntimeError as e:
         print('Failed to start-up application server, exiting')
         #logger.error('Failed to start-up gunicorn, exiting. Consider putting application into debug mode' + e)

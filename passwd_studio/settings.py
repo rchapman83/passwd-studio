@@ -37,4 +37,4 @@ logger_timber = logging.getLogger(__name__)
 logging.basicConfig(level=LOG_LEVEL, format=LOG_FORMAT)
 timber_handler = timber.TimberHandler(source_id=timber_id, api_key=timber_key, level=LOG_LEVEL, buffer_capacity=20, flush_interval=60, raise_exceptions=True)
 logger_timber.addHandler(timber_handler)
-LOGGER_NAME = 'logger_timber
+LOGGER_NAME = logger_timber

@@ -12,7 +12,7 @@ api = Api(application)
 
 class HelloWorld(Resource):
     def get(self):
-        self.logger.info('Test message...hi')
+        application.logger.info('Test message...hi')
         return {'greeting': 'Hello World'}, 200
 
 class GetKey(Resource):

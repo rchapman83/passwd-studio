@@ -14,6 +14,11 @@ class HelloWorld(Resource):
     def get(self):
         application.logger.info('Test message...hi')
         return {'greeting': 'Hello World'}, 200
+        
+class GetHorseBatteryStaple(Resource):
+    def get(self):
+        application.logger.info('You found it')
+        return {'xkcd': 'Horsing around'}, 200
 
 class GetKey(Resource):
     def get(self):
@@ -42,6 +47,7 @@ class GetVarLenPasswd(Resource):
         return {'password': passwd}, 200
 
 api.add_resource(GetPasswd, '/')
+api.add_resource(GetHorseBatteryStaple, '/xkcd')
 api.add_resource(GetVarLenPasswd, '/len/<int:PassLen>')
 api.add_resource(HelloWorld, '/hi')
 api.add_resource(GetKey, '/key')

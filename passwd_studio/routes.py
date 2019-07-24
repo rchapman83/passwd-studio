@@ -10,7 +10,7 @@ api = Api(application)
 
 class HelloWorld(Resource):
     def get(self):
-
+        api.logger_timber.info('Test message...hi')
         return {'greeting': 'Hello World'}, 200
 
 class GetKey(Resource):

@@ -29,15 +29,15 @@ if x=='0':
         logger.debug('gunicorn start-up complete')
     except RuntimeError as e:
         print('Failed to start-up application server, exiting')
-        #logger.error('Failed to start-up gunicorn, exiting. Consider putting application into debug mode' + e)
+        logger.error('Failed to start-up gunicorn, exiting. Consider putting application into debug mode' + e)
         quit()
 elif x=='1':
     print('Starting application in debug mode')
-    #logger.debug('Starting flask app server in debug mode')
+    logger.debug('Starting flask app server in debug mode')
     from flask import Flask
     from passwd_studio import application
     application.run(host='0.0.0.0', port=8080, debug=True)
 else:
     print('Invalid start-up configuration')
-    #logger.critical('Invalid start-up configuration for run.py, quitting')
+    logger.critical('Invalid start-up configuration for run.py, quitting')
     quit()

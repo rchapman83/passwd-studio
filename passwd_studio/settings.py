@@ -21,7 +21,10 @@ LOGGING = {
             'level': 'INFO',
             'class': 'timber.TimberHandler',
             'api_key': timber_key,
-            'source_id': timber_id
+            'source_id': timber_id, 
+            'buffer_capacity': 20, 
+            'flush_interval': 60, 
+            'raise_exceptions': True
         },
     },
     'loggers': {

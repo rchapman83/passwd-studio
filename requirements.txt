@@ -1,7 +1,7 @@
 gunicorn==19.9.0
 flask==1.1.1
 flask-restful==0.3.7
+google-cloud-datastore==1.10.0
 setproctitle
 futures
 timber
-certbot

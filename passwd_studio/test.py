@@ -16,7 +16,7 @@ timber_handler = timber.TimberHandler(source_id=s, api_key=t, level=logging.INFO
 logger.addHandler(timber_handler)
 
 def test():
-    result = 'Did you get those logs?'
+    result = 'Did you get those logs? hope so'
     print('Testing logging handlers')
     logger.info('log level info')
     logger.debug('debug mode')
